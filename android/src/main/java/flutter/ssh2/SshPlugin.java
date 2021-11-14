@@ -276,6 +276,7 @@ public class SshPlugin implements MethodCallHandler, StreamHandler, FlutterPlugi
 
         Properties properties = new Properties();
         properties.setProperty("StrictHostKeyChecking", "no");
+        properties.setProperty("PreferredAuthentications", "password");
         session.setConfig(properties);
         session.connect();
 
